@@ -203,17 +203,19 @@
   color: #dc2626;
 }
 
+/* Tablet y móvil: layout en columna */
 @media (max-width: 900px) {
   .auth-split {
     grid-template-columns: 1fr;
     grid-template-rows: auto 1fr;
   }
   .auth-banner {
-    min-height: 200px;
-    padding: 2rem 1.5rem;
+    min-height: 180px;
+    padding: 1.75rem 1.5rem;
   }
   .auth-banner-content h2 {
     font-size: 1.5rem;
+    letter-spacing: 0.1em;
   }
   .auth-banner-content h3 {
     font-size: 1.15rem;
@@ -222,7 +224,64 @@
     font-size: 0.9rem;
   }
   .auth-form-panel {
-    padding: 1.5rem;
+    padding: 1.5rem 1rem;
+  }
+  .auth-form-panel .login-card {
+    padding: 2rem 1.5rem;
+  }
+}
+
+/* Formulario registro: 1 columna en móvil */
+@media (max-width: 600px) {
+  .register-form {
+    grid-template-columns: 1fr;
+  }
+  .register-form .field:nth-child(1),
+  .register-form .field:nth-child(2),
+  .register-form .field:nth-child(3),
+  .register-form .field:nth-child(4) {
+    grid-column: 1;
+    grid-row: auto;
+  }
+  .register-form .field:nth-child(1) { grid-row: 1; }
+  .register-form .field:nth-child(2) { grid-row: 2; }
+  .register-form .field:nth-child(3) { grid-row: 3; }
+  .register-form .field:nth-child(4) { grid-row: 4; }
+}
+
+/* Móvil pequeño */
+@media (max-width: 480px) {
+  .auth-banner {
+    min-height: 150px;
+    padding: 1.25rem 1rem;
+  }
+  .auth-banner-content h2 {
+    font-size: 1.25rem;
+    letter-spacing: 0.08em;
+  }
+  .auth-banner-content h3 {
+    font-size: 1rem;
+    margin-bottom: 0.75rem;
+  }
+  .auth-banner-content p {
+    font-size: 0.85rem;
+  }
+  .auth-form-panel {
+    padding: 1rem 0.75rem;
+  }
+  .auth-form-panel .login-card {
+    padding: 1.5rem 1.25rem;
+  }
+  .register-card {
+    padding: 1rem 1.25rem;
+  }
+  .register-card .login-icon {
+    width: 36px;
+    height: 36px;
+    font-size: 1rem;
+  }
+  .register-card h1 {
+    font-size: 1.15rem;
   }
 }
 

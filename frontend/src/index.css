@@ -4,12 +4,25 @@
   box-sizing: border-box;
 }
 
+html {
+  font-size: 16px;
+  -webkit-text-size-adjust: 100%;
+}
+
 body {
   font-family: 'DM Sans', 'Segoe UI', system-ui, sans-serif;
   background: linear-gradient(160deg, #1c1917 0%, #292524 30%, #431407 70%, #7c2d12 100%);
   min-height: 100vh;
+  min-height: 100dvh;
   color: #e2e8f0;
   -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+}
+
+@media (max-width: 480px) {
+  html {
+    font-size: 15px;
+  }
 }
 
 #root {
@@ -38,6 +51,7 @@ button:active {
 
 input, select, textarea {
   font-family: inherit;
+  font-size: 16px;
 }
 
 input:focus, select:focus, textarea:focus {

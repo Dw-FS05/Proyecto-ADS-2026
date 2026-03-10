@@ -79,3 +79,35 @@
 .empty {
   color: #64748b;
 }
+
+@media (max-width: 768px) {
+  .eventos-page h1 {
+    font-size: 1.35rem;
+    margin-bottom: 1.25rem;
+  }
+  .eventos-grid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+  .evento-card {
+    padding: 1.25rem 1.25rem;
+  }
+  .evento-card h3 {
+    font-size: 1.05rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .eventos-page h1 {
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+  }
+  .evento-card {
+    padding: 1rem 1rem;
+  }
+  .evento-meta {
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    font-size: 0.8rem;
+  }
+}

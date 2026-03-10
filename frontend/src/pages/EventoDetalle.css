@@ -132,3 +132,35 @@
   border-radius: 50%;
   background: #ea580c;
 }
+
+@media (max-width: 768px) {
+  .evento-detalle {
+    max-width: 100%;
+  }
+  .evento-header h1 {
+    font-size: 1.5rem;
+  }
+  .evento-stats {
+    font-size: 0.9rem;
+    padding: 0.5rem 0.875rem;
+  }
+  .asistentes {
+    margin-top: 2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .evento-header h1 {
+    font-size: 1.3rem;
+  }
+  .descripcion {
+    font-size: 0.95rem;
+    margin-bottom: 1.25rem;
+  }
+  .asistentes li {
+    padding: 0.625rem 0.75rem;
+    font-size: 0.9rem;
+    flex-wrap: wrap;
+    word-break: break-word;
+  }
+}

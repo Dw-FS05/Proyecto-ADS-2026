@@ -133,3 +133,13 @@
 .custom-select.admin .custom-select-option.selected:hover {
   background: #cbd5e1;
 }
+
+@media (max-width: 480px) {
+  .custom-select-dropdown {
+    max-height: 50vh;
+    overflow-y: auto;
+  }
+  .custom-select-option {
+    padding: 0.875rem 1rem;
+  }
+}
