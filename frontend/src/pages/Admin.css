@@ -1,0 +1,151 @@
+.admin-page h1 {
+  margin-bottom: 2rem;
+  font-size: 1.5rem;
+  font-weight: 600;
+  letter-spacing: -0.02em;
+  animation: fadeInUp 0.4s ease-out;
+}
+
+.admin-section {
+  margin-bottom: 2.5rem;
+}
+
+.admin-section h2 {
+  font-size: 1rem;
+  font-weight: 600;
+  margin-bottom: 1.25rem;
+  color: #94a3b8;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.admin-section form {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  align-items: flex-end;
+  margin-bottom: 1.25rem;
+  padding: 1.5rem;
+  background: rgba(30, 41, 59, 0.4);
+  border: 1px solid rgba(71, 85, 105, 0.3);
+  border-radius: 14px;
+  animation: fadeInUp 0.45s ease-out;
+}
+
+.admin-section:nth-of-type(2) .usuarios-table {
+  animation: fadeInUp 0.5s ease-out 0.1s backwards;
+}
+
+.admin-section form input {
+  min-width: 160px;
+  padding: 0.75rem 1rem;
+  background: rgba(15, 23, 42, 0.9);
+  border: 1px solid rgba(71, 85, 105, 0.5);
+  border-radius: 10px;
+  color: #e2e8f0;
+  font-size: 0.95rem;
+}
+
+.admin-section form input:focus {
+  border-color: #ea580c;
+  outline: none;
+}
+
+.admin-section form .btn-primary {
+  padding: 0.75rem 1.5rem;
+  border-radius: 10px;
+  background: linear-gradient(135deg, #ea580c, #c2410c);
+  color: white;
+  border: none;
+  font-weight: 600;
+  box-shadow: 0 4px 14px rgba(234, 88, 12, 0.35);
+}
+
+.admin-section form .btn-primary:hover {
+  background: linear-gradient(135deg, #c2410c, #9a3412);
+  transform: translateY(-1px);
+}
+
+.msg-ok {
+  color: #4ade80;
+  font-size: 0.9rem;
+  padding: 0.5rem 0;
+}
+
+.msg-err {
+  color: #f87171;
+  font-size: 0.9rem;
+  padding: 0.5rem 0;
+}
+
+.usuarios-table {
+  overflow-x: auto;
+  border-radius: 14px;
+  border: 1px solid rgba(71, 85, 105, 0.35);
+  background: rgba(30, 41, 59, 0.3);
+}
+
+.usuarios-table tbody tr {
+  animation: fadeIn 0.3s ease-out backwards;
+}
+
+.usuarios-table tbody tr:nth-child(1) { animation-delay: 0.05s; }
+.usuarios-table tbody tr:nth-child(2) { animation-delay: 0.08s; }
+.usuarios-table tbody tr:nth-child(3) { animation-delay: 0.11s; }
+.usuarios-table tbody tr:nth-child(4) { animation-delay: 0.14s; }
+.usuarios-table tbody tr:nth-child(5) { animation-delay: 0.17s; }
+.usuarios-table tbody tr:nth-child(6) { animation-delay: 0.2s; }
+.usuarios-table tbody tr:nth-child(n+7) { animation-delay: 0.23s; }
+
+.usuarios-table table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.usuarios-table th,
+.usuarios-table td {
+  padding: 1rem 1.25rem;
+  text-align: left;
+}
+
+.usuarios-table th {
+  color: #64748b;
+  font-weight: 600;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  border-bottom: 1px solid rgba(71, 85, 105, 0.4);
+  background: rgba(15, 23, 42, 0.3);
+}
+
+.usuarios-table td {
+  color: #cbd5e1;
+  border-bottom: 1px solid rgba(71, 85, 105, 0.2);
+}
+
+.usuarios-table tbody tr:hover {
+  background: rgba(234, 88, 12, 0.08);
+}
+
+.usuarios-table tbody tr:last-child td {
+  border-bottom: none;
+}
+
+.usuarios-table .rol-badge {
+  display: inline-block;
+  padding: 0.2rem 0.6rem;
+  border-radius: 6px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.usuarios-table .rol-badge.admin {
+  background: rgba(234, 88, 12, 0.25);
+  color: #fb923c;
+}
+
+.usuarios-table .rol-badge.asistente {
+  background: rgba(100, 116, 139, 0.3);
+  color: #94a3b8;
+}

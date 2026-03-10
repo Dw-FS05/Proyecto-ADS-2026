@@ -1,0 +1,135 @@
+.custom-select {
+  position: relative;
+  margin-bottom: 1.25rem;
+}
+
+.custom-select button {
+  transition: none;
+}
+
+.custom-select button:active {
+  transform: none;
+}
+
+.custom-select.admin {
+  margin-bottom: 0;
+  min-width: 140px;
+}
+
+.custom-select-trigger {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  padding: 0.875rem 1rem;
+  background: rgba(255, 255, 255, 0.15);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  border-radius: 12px;
+  color: #fff;
+  font-size: 1rem;
+  font-weight: 400;
+  cursor: pointer;
+}
+
+.custom-select-trigger:hover {
+  background: rgba(255, 255, 255, 0.18);
+  border-color: rgba(255, 255, 255, 0.3);
+}
+
+.custom-select-trigger svg {
+  flex-shrink: 0;
+  margin-left: 0.5rem;
+  stroke: rgba(255, 255, 255, 0.6);
+}
+
+.custom-select.open .custom-select-trigger svg {
+  transform: rotate(180deg);
+}
+
+.custom-select-trigger {
+  -webkit-appearance: none;
+  appearance: none;
+}
+
+.custom-select-dropdown {
+  position: absolute;
+  top: calc(100% + 6px);
+  left: 0;
+  right: 0;
+  background: #fff;
+  border: none;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  z-index: 100;
+}
+
+.custom-select-option {
+  display: block;
+  width: 100%;
+  padding: 0.75rem 1rem;
+  background: transparent;
+  border: none;
+  border-radius: 0;
+  color: #334155;
+  font-size: 0.95rem;
+  font-weight: 500;
+  text-align: left;
+  cursor: pointer;
+}
+
+.custom-select-option:hover {
+  background: #f1f5f9;
+}
+
+.custom-select-option.selected {
+  background: #e2e8f0;
+  color: #1e293b;
+}
+
+.custom-select-option.selected:hover {
+  background: #cbd5e1;
+}
+
+.custom-select.admin .custom-select-trigger {
+  background: rgba(30, 41, 59, 0.6);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  color: #e2e8f0;
+  padding: 0.75rem 1rem;
+  font-size: 0.95rem;
+  box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.1) inset;
+}
+
+.custom-select.admin .custom-select-trigger:hover {
+  background: rgba(30, 41, 59, 0.75);
+  border-color: rgba(148, 163, 184, 0.3);
+}
+
+.custom-select.admin .custom-select-trigger svg {
+  stroke: #94a3b8;
+}
+
+.custom-select.admin .custom-select-dropdown {
+  background: #fff;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.custom-select.admin .custom-select-option {
+  background: transparent;
+  color: #334155;
+}
+
+.custom-select.admin .custom-select-option:hover {
+  background: #f1f5f9;
+}
+
+.custom-select.admin .custom-select-option.selected {
+  background: #e2e8f0;
+  color: #1e293b;
+}
+
+.custom-select.admin .custom-select-option.selected:hover {
+  background: #cbd5e1;
+}

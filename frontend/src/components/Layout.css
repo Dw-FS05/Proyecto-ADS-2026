@@ -1,0 +1,94 @@
+.layout {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.875rem 2rem;
+  background: rgba(28, 25, 23, 0.95);
+  border-bottom: 1px solid rgba(234, 88, 12, 0.2);
+  backdrop-filter: blur(12px);
+  box-shadow: 0 1px 0 rgba(234, 88, 12, 0.08);
+  animation: slideDown 0.35s ease-out;
+}
+
+.nav-links a {
+  transition: all 0.2s ease;
+}
+
+.nav-links a.active {
+  transition: all 0.2s ease;
+}
+
+.nav-brand {
+  font-weight: 700;
+  font-size: 1.25rem;
+  letter-spacing: -0.02em;
+  background: linear-gradient(135deg, #fb923c, #ea580c);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.nav-links a {
+  padding: 0.5rem 1rem;
+  transform-origin: center;
+  border-radius: 8px;
+  color: #d6d3d1;
+  font-weight: 500;
+  font-size: 0.9rem;
+}
+
+.nav-links a:hover {
+  color: #fef3c7;
+  background: rgba(234, 88, 12, 0.15);
+}
+
+.nav-links a.active {
+  color: #fb923c;
+  background: rgba(234, 88, 12, 0.2);
+}
+
+.nav-user {
+  font-size: 0.7rem;
+  padding: 0.25rem 0.6rem;
+  border-radius: 6px;
+  color: #64748b;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  background: rgba(100, 116, 139, 0.2);
+  font-weight: 600;
+}
+
+.btn-ghost {
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  background: transparent;
+  color: #94a3b8;
+  border: 1px solid rgba(148, 163, 184, 0.25);
+  font-size: 0.9rem;
+}
+
+.btn-ghost:hover {
+  color: #fca5a5;
+  border-color: rgba(248, 113, 113, 0.5);
+  background: rgba(248, 113, 113, 0.1);
+}
+
+.main {
+  flex: 1;
+  padding: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  width: 100%;
+}
