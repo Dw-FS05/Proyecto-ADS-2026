@@ -1,4 +1,3 @@
-/* === Hero section - Party / Booking vibe === */
 .eventos-hero {
   position: relative;
   margin: -2rem -2rem 2.5rem -2rem;
@@ -64,7 +63,6 @@
   font-weight: 400;
 }
 
-/* === Section === */
 .eventos-section {
   animation: fadeInUp 0.5s ease-out 0.2s backwards;
 }
@@ -84,7 +82,6 @@
   color: var(--text-secondary);
 }
 
-/* === Event cards - Ticket / Booking style === */
 .eventos-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
@@ -218,7 +215,6 @@
   transform: translateX(4px);
 }
 
-/* === Empty & loading === */
 .loading, .error-msg, .empty {
   text-align: center;
   padding: 3rem 2rem;
@@ -234,7 +230,6 @@
   color: var(--text-muted);
 }
 
-/* === Responsive === */
 @media (max-width: 768px) {
   .eventos-hero {
     margin: -1rem -1rem 2rem -1rem;
