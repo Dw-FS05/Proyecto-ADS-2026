@@ -55,5 +55,3 @@ Este proyecto se compone de un backend en **Python (Flask)** y un frontend en **
    npm run dev
    ```
    *El frontend estará corriendo usualmente en: `http://localhost:5173`*
-
-¡Listo! Ya puedes ir a la URL del frontend en tu navegador e iniciar sesión con las cuentas por defecto (por ej. `admin@gmail.com` / `123456`).
