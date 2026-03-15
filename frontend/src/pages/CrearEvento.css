@@ -45,8 +45,8 @@
 
 .crear-evento input:focus,
 .crear-evento textarea:focus {
-  border-color: #ea580c;
-  box-shadow: 0 0 0 3px rgba(234, 88, 12, 0.2);
+  border-color: #3b82f6;
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.2);
 }
 
 .crear-evento textarea {
@@ -75,15 +75,15 @@
 }
 
 .btn-primary {
-  background: linear-gradient(135deg, #ea580c, #c2410c);
+  background: linear-gradient(135deg, #2563eb, #1d4ed8);
   color: white;
   border: none;
-  box-shadow: 0 4px 14px rgba(234, 88, 12, 0.35);
+  box-shadow: 0 4px 14px rgba(37, 99, 235, 0.35);
 }
 
 .btn-primary:hover {
-  background: linear-gradient(135deg, #c2410c, #9a3412);
-  box-shadow: 0 6px 20px rgba(234, 88, 12, 0.45);
+  background: linear-gradient(135deg, #1d4ed8, #1e40af);
+  box-shadow: 0 6px 20px rgba(37, 99, 235, 0.45);
   transform: translateY(-1px);
 }
 

@@ -47,22 +47,22 @@
 }
 
 .admin-section form input:focus {
-  border-color: #ea580c;
+  border-color: #3b82f6;
   outline: none;
 }
 
 .admin-section form .btn-primary {
   padding: 0.75rem 1.5rem;
   border-radius: 10px;
-  background: linear-gradient(135deg, #ea580c, #c2410c);
+  background: linear-gradient(135deg, #2563eb, #1d4ed8);
   color: white;
   border: none;
   font-weight: 600;
-  box-shadow: 0 4px 14px rgba(234, 88, 12, 0.35);
+  box-shadow: 0 4px 14px rgba(37, 99, 235, 0.35);
 }
 
 .admin-section form .btn-primary:hover {
-  background: linear-gradient(135deg, #c2410c, #9a3412);
+  background: linear-gradient(135deg, #1d4ed8, #1e40af);
   transform: translateY(-1px);
 }
 
@@ -124,7 +124,7 @@
 }
 
 .usuarios-table tbody tr:hover {
-  background: rgba(234, 88, 12, 0.08);
+  background: rgba(59, 130, 246, 0.08);
 }
 
 .usuarios-table tbody tr:last-child td {
@@ -141,8 +141,8 @@
 }
 
 .usuarios-table .rol-badge.admin {
-  background: rgba(234, 88, 12, 0.25);
-  color: #fb923c;
+  background: rgba(59, 130, 246, 0.25);
+  color: #60a5fa;
 }
 
 .usuarios-table .rol-badge.asistente {

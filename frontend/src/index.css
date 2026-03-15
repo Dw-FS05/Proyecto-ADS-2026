@@ -11,7 +11,7 @@ html {
 
 body {
   font-family: 'DM Sans', 'Segoe UI', system-ui, sans-serif;
-  background: linear-gradient(160deg, #1c1917 0%, #292524 30%, #431407 70%, #7c2d12 100%);
+  background: linear-gradient(160deg, #0a1929 0%, #0f2744 30%, #1e3a5f 70%, #2a5298 100%);
   min-height: 100vh;
   min-height: 100dvh;
   color: #e2e8f0;
@@ -30,13 +30,13 @@ body {
 }
 
 a {
-  color: #fdba74;
+  color: #93c5fd;
   text-decoration: none;
   transition: color 0.2s;
 }
 
 a:hover {
-  color: #fb923c;
+  color: #60a5fa;
 }
 
 button {
@@ -72,8 +72,8 @@ input:focus, select:focus, textarea:focus {
   content: '';
   width: 20px;
   height: 20px;
-  border: 2px solid rgba(234, 88, 12, 0.3);
-  border-top-color: #ea580c;
+  border: 2px solid rgba(59, 130, 246, 0.3);
+  border-top-color: #3b82f6;
   border-radius: 50%;
   animation: spin 0.8s linear infinite;
 }

@@ -22,7 +22,7 @@
   border-radius: 8px;
   color: #a8a29e;
   font-size: 0.9rem;
-  background: rgba(234, 88, 12, 0.15);
+  background: rgba(59, 130, 246, 0.15);
 }
 
 .descripcion {
@@ -40,8 +40,8 @@
   border-radius: 10px;
   color: #d6d3d1;
   font-size: 0.95rem;
-  background: rgba(234, 88, 12, 0.12);
-  border: 1px solid rgba(234, 88, 12, 0.25);
+  background: rgba(59, 130, 246, 0.12);
+  border: 1px solid rgba(59, 130, 246, 0.25);
 }
 
 .btn {
@@ -53,14 +53,14 @@
 }
 
 .btn-primary {
-  background: linear-gradient(135deg, #ea580c, #c2410c);
+  background: linear-gradient(135deg, #2563eb, #1d4ed8);
   color: white;
-  box-shadow: 0 4px 14px rgba(234, 88, 12, 0.35);
+  box-shadow: 0 4px 14px rgba(37, 99, 235, 0.35);
 }
 
 .btn-primary:hover {
-  background: linear-gradient(135deg, #c2410c, #9a3412);
-  box-shadow: 0 6px 20px rgba(234, 88, 12, 0.45);
+  background: linear-gradient(135deg, #1d4ed8, #1e40af);
+  box-shadow: 0 6px 20px rgba(37, 99, 235, 0.45);
   transform: translateY(-1px);
 }
 
@@ -130,7 +130,7 @@
   height: 8px;
   margin-right: 0.75rem;
   border-radius: 50%;
-  background: #ea580c;
+  background: #3b82f6;
 }
 
 @media (max-width: 768px) {
