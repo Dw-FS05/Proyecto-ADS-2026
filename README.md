@@ -7,7 +7,7 @@ Este proyecto se compone de un backend en **Python (Flask)** y un frontend en **
 - [Python 3.8+](https://www.python.org/downloads/)
 - Git
 
-## ⚙️ 1. Configuración del Backend (Python/Flask)
+## 1. Configuración del Backend (Python/Flask)
 
 1. Abre una terminal y colócate en la raíz del proyecto.
 2. Navega a la carpeta del backend:
@@ -38,7 +38,7 @@ Este proyecto se compone de un backend en **Python (Flask)** y un frontend en **
    ```
    *El backend estará corriendo en: `http://localhost:5001`*
 
-## 🎨 2. Configuración del Frontend (React/Vite)
+## 2. Configuración del Frontend (React/Vite)
 
 1. En una nueva terminal, posicionado en la raíz del proyecto, navega a la carpeta del frontend:
    ```bash

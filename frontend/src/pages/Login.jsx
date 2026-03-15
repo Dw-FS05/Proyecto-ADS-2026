@@ -44,7 +44,6 @@ export default function Login() {
       </div>
       <div className="auth-form-panel">
         <div className="login-card">
-          <div className="login-icon">📅</div>
           <h1>Iniciar sesión</h1>
           <p className="login-subtitle">Ingresa tus datos para acceder</p>
           <form onSubmit={handleSubmit}>

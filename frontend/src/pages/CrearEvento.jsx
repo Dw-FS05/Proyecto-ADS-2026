@@ -27,33 +27,47 @@ export default function CrearEvento() {
 
   return (
     <div className="crear-evento">
-      <h1>Crear evento</h1>
-      <form onSubmit={handleSubmit}>
-        <label>Nombre *</label>
-        <input
-          value={form.nombre}
-          onChange={(e) => setForm({ ...form, nombre: e.target.value })}
-          required
-        />
-        <label>Descripción</label>
-        <textarea
-          value={form.descripcion}
-          onChange={(e) => setForm({ ...form, descripcion: e.target.value })}
-          rows={3}
-        />
-        <label>Fecha</label>
-        <input
-          type="date"
-          value={form.fecha}
-          onChange={(e) => setForm({ ...form, fecha: e.target.value })}
-        />
-        <label>Capacidad máxima</label>
-        <input
-          type="number"
-          min="1"
-          value={form.capacidad_max}
-          onChange={(e) => setForm({ ...form, capacidad_max: e.target.value })}
-        />
+      <div className="crear-evento-card">
+        <div className="crear-evento-header">
+          <h1>Crear evento</h1>
+          <p className="crear-evento-subtitle">Organiza tu próxima fiesta o evento. Reservas en un clic.</p>
+        </div>
+        <form onSubmit={handleSubmit} className="crear-evento-form">
+          <div className="form-grid">
+            <div className="form-field">
+              <label>Nombre *</label>
+              <input
+                value={form.nombre}
+                onChange={(e) => setForm({ ...form, nombre: e.target.value })}
+                required
+              />
+            </div>
+            <div className="form-field">
+              <label>Descripción</label>
+              <textarea
+                value={form.descripcion}
+                onChange={(e) => setForm({ ...form, descripcion: e.target.value })}
+                rows={2}
+              />
+            </div>
+            <div className="form-field">
+              <label>Fecha</label>
+              <input
+                type="date"
+                value={form.fecha}
+                onChange={(e) => setForm({ ...form, fecha: e.target.value })}
+              />
+            </div>
+            <div className="form-field">
+              <label>Capacidad máxima</label>
+              <input
+                type="number"
+                min="1"
+                value={form.capacidad_max}
+                onChange={(e) => setForm({ ...form, capacidad_max: e.target.value })}
+              />
+            </div>
+          </div>
         {error && <p className="error">{error}</p>}
         <div className="form-actions">
           <button type="submit" className="btn btn-primary">Crear</button>
@@ -62,6 +76,7 @@ export default function CrearEvento() {
           </button>
         </div>
       </form>
+      </div>
     </div>
   )
 }

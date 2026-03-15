@@ -1,34 +1,112 @@
 .crear-evento {
-  max-width: 520px;
+  width: 100%;
+  max-width: 1100px;
+  margin: 0 auto;
+  min-height: calc(100vh - 120px);
+  display: flex;
+  align-items: center;
   animation: fadeInUp 0.4s ease-out;
 }
 
+.crear-evento .crear-evento-card {
+  background: var(--bg-elevated);
+  border: 1px solid var(--border);
+  border-radius: 20px;
+  padding: 2rem;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.25), 0 0 0 1px rgba(59, 130, 246, 0.05);
+  width: 100%;
+}
+
+.crear-evento-header {
+  margin-bottom: 1.5rem;
+  position: relative;
+}
+
+.crear-evento-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+  margin-bottom: 0.75rem;
+  border-radius: 12px;
+  background: var(--accent-muted);
+  color: var(--accent);
+  font-size: 1.35rem;
+}
+
 .crear-evento h1 {
-  margin-bottom: 1.75rem;
-  font-size: 1.5rem;
-  font-weight: 600;
-  letter-spacing: -0.02em;
+  margin-bottom: 0.35rem;
+  font-family: var(--font-display);
+  font-size: 1.65rem;
+  font-weight: 700;
+  letter-spacing: -0.03em;
+  color: var(--text-primary);
+}
+
+.crear-evento .crear-evento-subtitle {
+  font-size: 0.95rem;
+  color: var(--text-muted);
+  margin-bottom: 0;
+  font-weight: 400;
+}
+
+.crear-evento-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.crear-evento-form .form-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  gap: 1rem 3rem;
+  min-height: 180px;
+}
+
+.crear-evento-form .form-field {
+  display: flex;
+  flex-direction: column;
+  min-height: 0;
+}
+
+.crear-evento-form .form-field input,
+.crear-evento-form .form-field textarea {
+  flex: 1;
+  min-height: 40px;
+}
+
+.crear-evento-form .form-actions,
+.crear-evento-form .error {
+  margin-top: 1rem;
 }
 
 .crear-evento label {
   display: block;
-  margin-bottom: 0.5rem;
-  font-size: 0.9rem;
-  font-weight: 500;
-  color: #94a3b8;
+  margin-bottom: 0.4rem;
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--text-secondary);
+  letter-spacing: 0.02em;
 }
 
 .crear-evento input,
 .crear-evento textarea {
   width: 100%;
-  padding: 0.875rem 1rem;
-  margin-bottom: 1.25rem;
-  background: rgba(15, 23, 42, 0.8);
-  border: 1px solid rgba(71, 85, 105, 0.5);
-  border-radius: 10px;
-  color: #e2e8f0;
-  font-size: 1rem;
-  transition: border-color 0.2s, box-shadow 0.2s;
+  padding: 0.7rem 1rem;
+  margin-bottom: 0;
+  background: var(--bg-surface);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  color: var(--text-primary);
+  font-size: 1.05rem;
+  transition: border-color 0.25s, box-shadow 0.25s, background 0.25s;
+}
+
+.crear-evento input:hover,
+.crear-evento textarea:hover {
+  background: var(--bg-elevated);
+  border-color: var(--accent);
 }
 
 .crear-evento input:nth-of-type(1),
@@ -45,13 +123,25 @@
 
 .crear-evento input:focus,
 .crear-evento textarea:focus {
-  border-color: #3b82f6;
-  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.2);
+  border-color: var(--accent);
+  box-shadow: 0 0 0 3px var(--accent-muted);
+}
+
+
+.crear-evento-form .form-field {
+  display: flex;
+  flex-direction: column;
+}
+
+.crear-evento-form .error,
+.crear-evento-form .form-actions {
+  margin-top: 1rem;
 }
 
 .crear-evento textarea {
   resize: vertical;
-  min-height: 88px;
+  min-height: 70px;
+  margin-bottom: 0;
 }
 
 .crear-evento .error {
@@ -65,53 +155,79 @@
   display: flex;
   gap: 1rem;
   margin-top: 1.25rem;
+  padding-top: 1.25rem;
+  border-top: 1px solid var(--border);
 }
 
 .form-actions .btn {
   padding: 0.75rem 1.5rem;
-  border-radius: 10px;
+  border-radius: 12px;
   font-weight: 600;
-  font-size: 0.95rem;
+  font-size: 1.05rem;
+  transition: all 0.25s ease;
 }
 
 .btn-primary {
-  background: linear-gradient(135deg, #2563eb, #1d4ed8);
+  background: var(--accent);
   color: white;
   border: none;
-  box-shadow: 0 4px 14px rgba(37, 99, 235, 0.35);
+  box-shadow: 0 4px 20px rgba(249, 115, 22, 0.35), inset 0 1px 0 rgba(255, 255, 255, 0.15);
 }
 
 .btn-primary:hover {
-  background: linear-gradient(135deg, #1d4ed8, #1e40af);
-  box-shadow: 0 6px 20px rgba(37, 99, 235, 0.45);
-  transform: translateY(-1px);
+  background: var(--accent-hover);
+  box-shadow: 0 8px 28px rgba(249, 115, 22, 0.45);
+  transform: translateY(-2px);
 }
 
 .btn-ghost {
   background: transparent;
-  color: #94a3b8;
-  border: 1px solid rgba(71, 85, 105, 0.5);
+  color: var(--text-secondary);
+  border: 1px solid var(--border);
 }
 
 .btn-ghost:hover {
-  background: rgba(100, 116, 139, 0.15);
-  border-color: rgba(148, 163, 184, 0.4);
-  color: #e2e8f0;
+  background: var(--accent-muted);
+  border-color: var(--accent);
+  color: var(--accent);
 }
 
 @media (max-width: 768px) {
+  .crear-evento {
+    max-width: 100%;
+    padding: 0 1rem;
+  }
+  .crear-evento .crear-evento-card {
+    padding: 2rem;
+  }
   .crear-evento h1 {
-    font-size: 1.35rem;
-    margin-bottom: 1.5rem;
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+  }
+  .crear-evento-form .form-grid {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    min-height: auto;
+    gap: 1.5rem;
+  }
+
+  .crear-evento-form .form-field input,
+  .crear-evento-form .form-field textarea {
+    flex: none;
   }
   .crear-evento input,
   .crear-evento textarea {
-    padding: 0.75rem 1rem;
-    margin-bottom: 1rem;
+    padding: 0.9rem 1.1rem;
+    font-size: 1rem;
+  }
+  .crear-evento textarea {
+    min-height: 100px;
   }
   .form-actions {
     flex-direction: column;
     gap: 0.75rem;
+    margin-top: 1.5rem;
+    padding-top: 1.5rem;
   }
   .form-actions .btn {
     width: 100%;

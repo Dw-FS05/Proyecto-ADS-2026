@@ -31,11 +31,9 @@ export default function Layout() {
         </button>
         <div className={`nav-links ${menuOpen ? 'open' : ''}`}>
           <NavLink to="/eventos" onClick={() => setMenuOpen(false)}>Eventos</NavLink>
+          <NavLink to="/crear-evento" onClick={() => setMenuOpen(false)}>Crear Evento</NavLink>
           {user?.rol === 'admin' && (
-            <>
-              <NavLink to="/crear-evento" onClick={() => setMenuOpen(false)}>Crear Evento</NavLink>
-              <NavLink to="/admin" onClick={() => setMenuOpen(false)}>Admin</NavLink>
-            </>
+            <NavLink to="/admin" onClick={() => setMenuOpen(false)}>Admin</NavLink>
           )}
           <span className="nav-user">{user?.rol}</span>
           <button onClick={handleLogout} className="btn btn-ghost">Salir</button>

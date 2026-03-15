@@ -1,47 +1,82 @@
 .evento-detalle {
-  max-width: 640px;
+  max-width: 680px;
   animation: fadeInUp 0.4s ease-out;
 }
 
+.evento-detalle-card {
+  background: var(--bg-elevated);
+  border: 1px solid var(--border);
+  border-radius: 24px;
+  padding: 2.5rem;
+  box-shadow: 0 24px 48px -12px rgba(0, 0, 0, 0.5);
+  position: relative;
+  overflow: hidden;
+}
+
+.evento-detalle-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 5px;
+  background: linear-gradient(90deg, var(--accent), var(--accent-hover));
+  opacity: 1;
+}
+
 .evento-header {
-  margin-bottom: 1.25rem;
+  margin-bottom: 1.5rem;
   animation: fadeInUp 0.45s ease-out;
 }
 
-.evento-header h1 {
-  font-size: 1.875rem;
-  font-weight: 600;
-  letter-spacing: -0.02em;
+.evento-detalle-icon {
+  display: inline-block;
   margin-bottom: 0.5rem;
+  font-size: 1rem;
+  color: var(--accent);
+  font-weight: 400;
+}
+
+.evento-header h1 {
+  font-family: var(--font-display);
+  font-size: 2rem;
+  font-weight: 700;
+  letter-spacing: -0.04em;
+  margin-bottom: 0.75rem;
+  color: var(--text-primary);
+  line-height: 1.25;
 }
 
 .evento-header .fecha {
   display: inline-flex;
   align-items: center;
-  padding: 0.25rem 0.75rem;
-  border-radius: 8px;
-  color: #a8a29e;
+  padding: 0.35rem 0.9rem;
+  border-radius: 10px;
+  color: var(--text-secondary);
   font-size: 0.9rem;
-  background: rgba(59, 130, 246, 0.15);
+  font-weight: 500;
+  background: var(--accent-muted);
+  border: 1px solid rgba(249, 115, 22, 0.3);
 }
 
 .descripcion {
   margin-bottom: 1.5rem;
-  color: #cbd5e1;
-  line-height: 1.65;
+  color: var(--text-secondary);
+  line-height: 1.7;
   font-size: 1rem;
 }
 
 .evento-stats {
   display: inline-flex;
   align-items: center;
-  padding: 0.5rem 1rem;
+  padding: 0.6rem 1.25rem;
   margin-bottom: 1.5rem;
-  border-radius: 10px;
-  color: #d6d3d1;
+  border-radius: 14px;
+  color: var(--text-primary);
   font-size: 0.95rem;
-  background: rgba(59, 130, 246, 0.12);
-  border: 1px solid rgba(59, 130, 246, 0.25);
+  font-weight: 600;
+  background: var(--accent-muted);
+  border: 1px solid rgba(249, 115, 22, 0.25);
 }
 
 .btn {
@@ -53,14 +88,27 @@
 }
 
 .btn-primary {
-  background: linear-gradient(135deg, #2563eb, #1d4ed8);
+  background: linear-gradient(135deg, var(--accent), var(--accent-hover));
   color: white;
-  box-shadow: 0 4px 14px rgba(37, 99, 235, 0.35);
+  box-shadow: 0 4px 20px rgba(249, 115, 22, 0.4);
+}
+
+.evento-detalle .btn-primary {
+  padding: 1rem 2rem;
+  font-size: 1.05rem;
+  font-weight: 700;
+  border-radius: 14px;
+  letter-spacing: 0.04em;
+  box-shadow: 0 8px 28px rgba(249, 115, 22, 0.45), inset 0 1px 0 rgba(255, 255, 255, 0.15);
+}
+
+.evento-detalle .btn-primary:hover {
+  box-shadow: 0 12px 36px rgba(249, 115, 22, 0.5);
+  transform: translateY(-2px);
 }
 
 .btn-primary:hover {
-  background: linear-gradient(135deg, #1d4ed8, #1e40af);
-  box-shadow: 0 6px 20px rgba(37, 99, 235, 0.45);
+  box-shadow: 0 8px 28px rgba(249, 115, 22, 0.5);
   transform: translateY(-1px);
 }
 
@@ -88,15 +136,18 @@
 
 .asistentes {
   margin-top: 2.5rem;
-  padding-top: 1.75rem;
-  border-top: 1px solid rgba(71, 85, 105, 0.35);
+  padding-top: 2rem;
+  border-top: 1px solid var(--border);
 }
 
 .asistentes h3 {
-  font-size: 1rem;
-  font-weight: 600;
-  margin-bottom: 1rem;
-  color: #94a3b8;
+  font-family: var(--font-display);
+  font-size: 0.95rem;
+  font-weight: 700;
+  margin-bottom: 1.25rem;
+  color: var(--text-secondary);
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
 }
 
 .asistentes ul {
@@ -109,12 +160,18 @@
 .asistentes li {
   display: flex;
   align-items: center;
-  padding: 0.75rem 1rem;
-  border-radius: 10px;
-  color: #cbd5e1;
-  background: rgba(30, 41, 59, 0.4);
-  border: 1px solid rgba(71, 85, 105, 0.25);
+  padding: 0.875rem 1.25rem;
+  border-radius: 14px;
+  color: var(--text-primary);
+  background: var(--bg-surface);
+  border: 1px solid var(--border);
   animation: fadeInUp 0.4s ease-out backwards;
+  transition: background 0.2s, border-color 0.2s;
+}
+
+.asistentes li:hover {
+  background: var(--bg-surface);
+  border-color: rgba(249, 115, 22, 0.3);
 }
 
 .asistentes li:nth-child(1) { animation-delay: 0.05s; }
@@ -130,7 +187,7 @@
   height: 8px;
   margin-right: 0.75rem;
   border-radius: 50%;
-  background: #3b82f6;
+  background: var(--accent);
 }
 
 @media (max-width: 768px) {

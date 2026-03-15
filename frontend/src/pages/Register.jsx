@@ -42,7 +42,6 @@ export default function Register() {
       </div>
       <div className="auth-form-panel">
         <div className="login-card register-card">
-        <div className="login-icon">📅</div>
         <h1>Crear cuenta</h1>
         <p className="login-subtitle">Completa el formulario para registrarte</p>
         <form onSubmit={handleSubmit} className="register-form">

@@ -38,16 +38,17 @@ export default function EventoDetalle() {
 
   return (
     <div className="evento-detalle">
-      <div className="evento-header">
-        <h1>{evento.nombre}</h1>
-        {evento.fecha && <span className="fecha">{evento.fecha}</span>}
-      </div>
-      {evento.descripcion && <p className="descripcion">{evento.descripcion}</p>}
-      <div className="evento-stats">
-        <span>{evento.asistentes_actuales} / {evento.capacidad_max} inscritos</span>
-      </div>
+      <div className="evento-detalle-card">
+        <div className="evento-header">
+          <h1>{evento.nombre}</h1>
+          {evento.fecha && <span className="fecha">{evento.fecha}</span>}
+        </div>
+        {evento.descripcion && <p className="descripcion">{evento.descripcion}</p>}
+        <div className="evento-stats">
+          <span>{evento.asistentes_actuales} / {evento.capacidad_max} inscritos</span>
+        </div>
       {!yaInscrito && !lleno && (
-        <button onClick={handleRegistrar} className="btn btn-primary">Registrarme</button>
+        <button onClick={handleRegistrar} className="btn btn-primary">Reservar mi lugar</button>
       )}
       {yaInscrito && <p className="inscrito">Ya estás inscrito</p>}
       {lleno && !yaInscrito && <p className="lleno">Evento lleno</p>}
@@ -62,6 +63,7 @@ export default function EventoDetalle() {
           </ul>
         </div>
       )}
+      </div>
     </div>
   )
 }

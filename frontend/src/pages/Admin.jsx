@@ -34,7 +34,10 @@ export default function Admin() {
 
   return (
     <div className="admin-page">
-      <h1>Panel de administración</h1>
+      <div className="admin-header">
+        <h1>Panel de administración</h1>
+        <p className="admin-subtitle">Gestiona usuarios y eventos del sistema</p>
+      </div>
       <section className="admin-section">
         <h2>Crear usuario</h2>
         <form onSubmit={handleCrearUsuario}>

@@ -1,9 +1,18 @@
 .admin-page h1 {
-  margin-bottom: 2rem;
-  font-size: 1.5rem;
-  font-weight: 600;
-  letter-spacing: -0.02em;
+  margin-bottom: 0.5rem;
+  font-size: 1.75rem;
+  font-weight: 700;
+  letter-spacing: -0.03em;
+  font-family: var(--font-display);
+  color: var(--text-primary);
   animation: fadeInUp 0.4s ease-out;
+}
+
+.admin-page .admin-subtitle {
+  font-size: 1rem;
+  color: #64748b;
+  margin-bottom: 2.5rem;
+  font-weight: 400;
 }
 
 .admin-section {
@@ -11,12 +20,12 @@
 }
 
 .admin-section h2 {
-  font-size: 1rem;
+  font-size: 0.9rem;
   font-weight: 600;
   margin-bottom: 1.25rem;
   color: #94a3b8;
   text-transform: uppercase;
-  letter-spacing: 0.04em;
+  letter-spacing: 0.06em;
 }
 
 .admin-section form {
@@ -25,10 +34,13 @@
   gap: 1rem;
   align-items: flex-end;
   margin-bottom: 1.25rem;
-  padding: 1.5rem;
-  background: rgba(30, 41, 59, 0.4);
-  border: 1px solid rgba(71, 85, 105, 0.3);
-  border-radius: 14px;
+  padding: 2rem;
+  background: rgba(15, 23, 42, 0.5);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid var(--border);
+  border-radius: 18px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2), 0 0 0 1px rgba(59, 130, 246, 0.05);
   animation: fadeInUp 0.45s ease-out;
 }
 
@@ -47,22 +59,22 @@
 }
 
 .admin-section form input:focus {
-  border-color: #3b82f6;
+  border-color: var(--accent);
   outline: none;
 }
 
 .admin-section form .btn-primary {
   padding: 0.75rem 1.5rem;
   border-radius: 10px;
-  background: linear-gradient(135deg, #2563eb, #1d4ed8);
+  background: linear-gradient(135deg, var(--accent), var(--accent-hover));
   color: white;
   border: none;
   font-weight: 600;
-  box-shadow: 0 4px 14px rgba(37, 99, 235, 0.35);
+  box-shadow: 0 4px 14px rgba(249, 115, 22, 0.4);
 }
 
 .admin-section form .btn-primary:hover {
-  background: linear-gradient(135deg, #1d4ed8, #1e40af);
+  background: linear-gradient(135deg, var(--accent-hover), #c2410c);
   transform: translateY(-1px);
 }
 
@@ -80,9 +92,12 @@
 
 .usuarios-table {
   overflow-x: auto;
-  border-radius: 14px;
-  border: 1px solid rgba(71, 85, 105, 0.35);
-  background: rgba(30, 41, 59, 0.3);
+  border-radius: 16px;
+  border: 1px solid var(--border);
+  background: rgba(15, 23, 42, 0.5);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15), 0 0 0 1px rgba(59, 130, 246, 0.05);
 }
 
 .usuarios-table tbody tr {
@@ -141,8 +156,8 @@
 }
 
 .usuarios-table .rol-badge.admin {
-  background: rgba(59, 130, 246, 0.25);
-  color: #60a5fa;
+  background: var(--accent-muted);
+  color: var(--accent);
 }
 
 .usuarios-table .rol-badge.asistente {

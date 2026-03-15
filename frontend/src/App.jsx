@@ -11,7 +11,7 @@ import Admin from './pages/Admin'
 function ProtectedRoute({ children, adminOnly }) {
   const { user } = useAuth()
   if (!user) return <Navigate to="/login" replace />
-  if (adminOnly && user.rol !== 'admin') return <Navigate to="/eventos" replace />
+  if (adminOnly && user?.rol !== 'admin') return <Navigate to="/eventos" replace />
   return children
 }
 
@@ -29,7 +29,7 @@ export default function App() {
           <ProtectedRoute><EventoDetalle /></ProtectedRoute>
         } />
         <Route path="crear-evento" element={
-          <ProtectedRoute adminOnly><CrearEvento /></ProtectedRoute>
+          <ProtectedRoute><CrearEvento /></ProtectedRoute>
         } />
         <Route path="admin" element={
           <ProtectedRoute adminOnly><Admin /></ProtectedRoute>
