@@ -14,3 +14,4 @@ Werkzeug==3.1.5
 PyJWT==2.8.0
 Flask-Cors==6.0.1
 python-dotenv==1.1.1
+gunicorn==23.0.0
