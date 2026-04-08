@@ -17,7 +17,9 @@ export default function Layout() {
   return (
     <div className="layout">
       <nav className="nav">
-        <NavLink to="/eventos" className="nav-brand" onClick={() => setMenuOpen(false)}>Eventos</NavLink>
+        <NavLink to="/eventos" className="nav-brand" onClick={() => setMenuOpen(false)} end>
+          <img src="/logo-eventum.png" alt="eventum" className="nav-brand-logo" />
+        </NavLink>
         <button
           type="button"
           className="nav-toggle"
@@ -30,7 +32,7 @@ export default function Layout() {
           <span />
         </button>
         <div className={`nav-links ${menuOpen ? 'open' : ''}`}>
-          <NavLink to="/eventos" onClick={() => setMenuOpen(false)}>Eventos</NavLink>
+          <NavLink to="/eventos" onClick={() => setMenuOpen(false)}>Inicio</NavLink>
           <NavLink to="/crear-evento" onClick={() => setMenuOpen(false)}>Crear Evento</NavLink>
           {user?.rol === 'admin' && (
             <NavLink to="/admin" onClick={() => setMenuOpen(false)}>Admin</NavLink>

@@ -82,6 +82,14 @@
   color: var(--text-secondary);
 }
 
+.eventos-empty-message {
+  margin: 1.5rem 0 0;
+  padding: 1.25rem 0;
+  font-size: 1rem;
+  color: var(--text-secondary);
+  text-align: left;
+}
+
 .eventos-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));

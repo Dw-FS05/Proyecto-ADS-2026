@@ -1,7 +1,6 @@
 import { useState, useEffect } from 'react'
 import { Link } from 'react-router-dom'
 import { getEventos } from '../api'
-import { useAuth } from '../context/AuthContext'
 import './Eventos.css'
 
 export default function Eventos() {
@@ -48,28 +47,7 @@ export default function Eventos() {
           })}
         </div>
         {eventos.length === 0 && (
-          <div className="eventos-empty">
-            <div className="eventos-empty-decoration">
-              <span className="eventos-empty-dot eventos-empty-dot-1" />
-              <span className="eventos-empty-dot eventos-empty-dot-2" />
-              <span className="eventos-empty-dot eventos-empty-dot-3" />
-              <span className="eventos-empty-dot eventos-empty-dot-4" />
-              <span className="eventos-empty-dot eventos-empty-dot-5" />
-            </div>
-            <div className="eventos-empty-icon">
-              <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden>
-                <rect x="8" y="12" width="48" height="40" rx="8" stroke="currentColor" strokeWidth="2" fill="none" opacity="0.3" />
-                <path d="M8 24h48" stroke="currentColor" strokeWidth="2" strokeLinecap="round" opacity="0.5" />
-                <circle cx="20" cy="34" r="3" fill="currentColor" opacity="0.6" />
-                <circle cx="32" cy="34" r="3" fill="currentColor" opacity="0.6" />
-                <circle cx="44" cy="34" r="3" fill="currentColor" opacity="0.6" />
-                <path d="M24 48h16" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" opacity="0.4" />
-              </svg>
-            </div>
-            <h3 className="eventos-empty-title">Aún no hay eventos</h3>
-            <p className="eventos-empty-text">Sé el primero en crear uno y comparte experiencias increíbles con otros.</p>
-            <Link to="/crear-evento" className="eventos-empty-cta">Crear evento</Link>
-          </div>
+          <p className="eventos-empty-message">No hay eventos disponibles</p>
         )}
       </section>
     </div>

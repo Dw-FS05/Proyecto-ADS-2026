@@ -37,7 +37,7 @@ export default function Register() {
         <div className="auth-banner-content">
           <h2>Únete</h2>
           <h3>Crear cuenta</h3>
-          <p>Regístrate para acceder al sistema de gestión de eventos. Podrás ver eventos disponibles, inscribirte y participar en la plataforma.</p>
+          <p>Regístrate para acceder a eventum. Podrás ver eventos disponibles, inscribirte y participar en la plataforma.</p>
         </div>
       </div>
       <div className="auth-form-panel">

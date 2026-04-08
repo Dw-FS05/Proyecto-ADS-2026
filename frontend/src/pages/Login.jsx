@@ -38,7 +38,7 @@ export default function Login() {
         </div>
         <div className="auth-banner-content">
           <h2>Bienvenido</h2>
-          <h3>Gestión de Eventos Empresariales</h3>
+          <h3>eventum</h3>
           <p>Organiza y administra eventos corporativos de forma eficiente. Registra asistentes, crea nuevos eventos y mantén el control desde un solo lugar.</p>
         </div>
       </div>

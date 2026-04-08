@@ -44,15 +44,17 @@ export default function EventoDetalle() {
           {evento.fecha && <span className="fecha">{evento.fecha}</span>}
         </div>
         {evento.descripcion && <p className="descripcion">{evento.descripcion}</p>}
-        <div className="evento-stats">
-          <span>{evento.asistentes_actuales} / {evento.capacidad_max} inscritos</span>
+        <div className="evento-acciones">
+          <div className="evento-stats">
+            <span>{evento.asistentes_actuales} / {evento.capacidad_max} inscritos</span>
+          </div>
+          {!yaInscrito && !lleno && (
+            <button type="button" onClick={handleRegistrar} className="btn btn-primary">Reservar mi lugar</button>
+          )}
+          {yaInscrito && <p className="inscrito">Ya estás inscrito</p>}
+          {lleno && !yaInscrito && <p className="lleno">Evento lleno</p>}
+          {msg && <p className={msg.includes('exitoso') ? 'msg-ok' : 'msg-err'}>{msg}</p>}
         </div>
-      {!yaInscrito && !lleno && (
-        <button onClick={handleRegistrar} className="btn btn-primary">Reservar mi lugar</button>
-      )}
-      {yaInscrito && <p className="inscrito">Ya estás inscrito</p>}
-      {lleno && !yaInscrito && <p className="lleno">Evento lleno</p>}
-      {msg && <p className={msg.includes('exitoso') ? 'msg-ok' : 'msg-err'}>{msg}</p>}
       {evento.asistentes?.length > 0 && (
         <div className="asistentes">
           <h3>Inscritos</h3>
