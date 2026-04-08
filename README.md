@@ -48,7 +48,7 @@ El proyecto cuenta con tres tipos de pruebas automatizadas para el backend: **pr
 |---|---|---|---|
 | `tests/test_smoke.py` | Humo | 10 | Verifica que la app carga, que los endpoints responden y devuelven JSON |
 | `tests/test_unit.py` | Unitaria | 12 | Prueba métodos individuales de los modelos `Usuario` y `Evento` |
-| `tests/test_integration.py` | Integración | 19 | Prueba flujos completos: crear usuario, login, crear evento, registrar asistente, casos borde |
+| `tests/test_integration.py` | Integración | 20 | Prueba flujos completos: crear usuario, login, crear evento, registrar asistente, casos borde |
 
 ### Requisitos previos
 
@@ -91,7 +91,7 @@ pytest --cov=src --cov=app --cov-report=term-missing
 - Las pruebas usan **SQLite en memoria** (`sqlite:///:memory:`), configurado automáticamente en `tests/conftest.py`. No se necesita ninguna variable de entorno especial ni conexión a base de datos.
 - Cada test empieza con una base de datos limpia y la elimina al terminar.
 - La configuración de pytest está en `backend/pytest.ini`.
-- El total de pruebas es **41**: 10 de humo, 12 unitarias y 19 de integración.
+- El total de pruebas es **42**: 10 de humo, 12 unitarias y 20 de integración.
 
 ---
 
