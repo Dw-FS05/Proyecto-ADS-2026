@@ -12,6 +12,7 @@ services:
       interval: 5s
       timeout: 5s
       retries: 5
+    restart: unless-stopped
 
   backend:
     build: ./backend
@@ -21,13 +22,41 @@ services:
     depends_on:
       db:
         condition: service_healthy
+    expose:
+      - "5001"
+    ports:
+      - "5001:5001"
+    healthcheck:
+      test:
+        [
+          "CMD-SHELL",
+          "python -c \"import urllib.request as u; u.urlopen('http://127.0.0.1:5001/api/eventos', timeout=5).read()\"",
+        ]
+      interval: 10s
+      timeout: 8s
+      retries: 6
+      start_period: 45s
+    restart: unless-stopped
 
   web:
     build: ./frontend
     ports:
       - "80:80"
     depends_on:
-      - backend
+      backend:
+        condition: service_healthy
+    restart: unless-stopped
+
+  backend-test:
+    profiles:
+      - test
+    build: ./backend
+    environment:
+      SECRET_KEY: test-docker
+      DATABASE_URL: "sqlite:///:memory:"
+    working_dir: /app
+    entrypoint: ["python", "-m", "pytest"]
+    command: ["-v", "tests/"]
 
 volumes:
   pgdata:

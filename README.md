@@ -112,3 +112,32 @@ pytest --cov=src --cov=app --cov-report=term-missing
    npm run dev
    ```
    *El frontend estará corriendo usualmente en: `http://localhost:5173`*
+
+## 4. Docker (PostgreSQL + backend + frontend)
+
+Requisitos: [Docker Engine](https://docs.docker.com/engine/install/) y el plugin [Docker Compose V2](https://docs.docker.com/compose/install/).
+
+Desde la **raíz del repositorio**:
+
+```bash
+docker compose up --build
+```
+
+- **Interfaz:** [http://localhost:80](http://localhost:80) (Nginx sirve el build de Vite y enruta `/api` al backend).
+- **API directa (opcional):** [http://localhost:5001/api/...](http://localhost:5001/api/eventos)
+
+El servicio `db` usa volúmenes persistentes; `backend` espera a que PostgreSQL esté listo y ejecuta `db.create_all()` al iniciar.
+
+### Pruebas dentro de Docker
+
+Las pruebas usan SQLite en memoria (ver `tests/conftest.py`), sin necesidad de levantar `db`:
+
+```bash
+docker compose --profile test run --rm backend-test
+```
+
+Para cobertura:
+
+```bash
+docker compose --profile test run --rm backend-test --cov=src --cov=app --cov-report=term-missing
+```
